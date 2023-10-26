@@ -103,7 +103,8 @@ import { ApiResult } from './types/ApiResult'
       path: './screenshots/screenshoot-send.png'
     })
 
-    const response = await axios.post('https://example.com/api/results', allRequestResults)
+    //Send results to your API
+    await axios.post('https://example.com/api/results', allRequestResults)
   }
 
 

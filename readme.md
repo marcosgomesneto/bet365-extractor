@@ -1,5 +1,7 @@
 # [Getting started](https://github.com/microsoft/TypeScript-Node-Starter#getting-started)
 
+This repository is a public resource created with the main goal of helping others learn.
+
 ### Clone Repository
 
 ```

@@ -28,7 +28,7 @@ import { ApiResult } from './types/ApiResult'
 
   console.log("Acessing Virtual Sports...")
 
-  await page.getByText('Virtual Sports').click()
+  await page.getByText('Esportes Virtuais').click()
 
   await page.waitForTimeout(2000)
 
@@ -97,14 +97,19 @@ import { ApiResult } from './types/ApiResult'
       }
     }
 
-    console.log('send sceenshoot')
+    try {
+      console.log('send sceenshoot')
 
-    await page.screenshot({
-      path: './screenshots/screenshoot-send.png'
-    })
+      await page.screenshot({
+        path: './screenshots/screenshoot-send.png'
+      })
 
-    //Send results to your API
-    await axios.post('https://example.com/api/results', allRequestResults)
+      //Send results to your API
+      await axios.post('https://example.com/api/results', allRequestResults)
+    } catch (e: any) {
+      console.log("Error sending results")
+    }
+
   }
 
 
